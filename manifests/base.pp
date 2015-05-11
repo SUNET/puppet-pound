@@ -28,7 +28,7 @@ class pound::base {
         'pound_header' :
             target => '/etc/pound/pound.cfg',
             content => template('pound/header.cfg.erb'),
-            order => 01,
+            order => '01',
     }
 #    concat::fragment {
 #        'pound_footer' :
