@@ -18,7 +18,7 @@ define pound::entry ($listen_ip,
         "pound_entry-${name}" :
             target => '/etc/pound/pound.cfg',
             content => template('pound/entry.cfg.erb'),
-            order => 30,
+            order => '30',
             notify  => Service['pound'],
     }
 }
