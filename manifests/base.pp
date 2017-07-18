@@ -15,9 +15,6 @@ class pound::base {
             mode => '0644'
     }
 
-    if $::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '12.04') >= 0 {
-       apt::ppa {'ppa:systec/pound-2.6-trusty': }
-    }
     package {
         'pound' :
             ensure => latest,
