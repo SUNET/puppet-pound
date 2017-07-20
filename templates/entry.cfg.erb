@@ -15,6 +15,7 @@
 <% else -%>
     Cert    "<%= @server_cert %>"
 <% end -%>
+    Disable TLSv1
     <% if @ssl_ciphers != "" %>Ciphers "<%= @ssl_ciphers -%>"
     SSLHonorCipherOrder   1
     <% end %>
