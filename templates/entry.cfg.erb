@@ -15,7 +15,7 @@
 <% else -%>
     Cert    "<%= @server_cert %>"
 <% end -%>
-    <% if @disable != "" %>Disable "<%= @disable -%>"<% end %>
+    <% if @disable != "" %>Disable <%= @disable -%><% end %>
     <% if @ssl_ciphers != "" %>Ciphers "<%= @ssl_ciphers -%>"<% end %>
     SSLHonorCipherOrder  <%= @cipher_order %>
     <% end %>
