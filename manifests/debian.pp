@@ -6,11 +6,7 @@
 class pound::debian inherits pound::base {
 
   if $::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '12.04') == 0 {
-     apt::ppa {'ppa:systec/pound-2.6-trusty': }
-  }
-
-  if $::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '14.04') >= 0 {
-     apt::ppa {'ppa:systec/pound-2.6-trusty': ensure => absent } 
+     apt::ppa {'ppa:unleashedtech/pound-2.7': }
   }
 
   Service['pound'] {
