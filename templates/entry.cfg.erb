@@ -15,10 +15,9 @@
 <% else -%>
     Cert    "<%= @server_cert %>"
 <% end -%>
-    Disable TLSv1
-    <% if @ssl_ciphers != "" %>Ciphers "<%= @ssl_ciphers -%>"
-    SSLHonorCipherOrder   1
-    <% end %>
+    <% if @disable != "" %>Disable "<%= @disable -%>"<% end -%>
+    <% if @ssl_ciphers != "" %>Ciphers "<%= @ssl_ciphers -%>"<% end -%>
+    SSLHonorCipherOrder  <%= @cipher_order -%>
     <% end %>
 <% @add_headers.each do |this_header| -%>
     AddHeader <%= this_header %>
