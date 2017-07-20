@@ -5,7 +5,7 @@
 #
 class pound::debian inherits pound::base {
 
-  if $::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '12.04') == 0 or versioncmp($::operatingsystemrelease, '14.04') {
+  if $::operatingsystem == 'Ubuntu' and (versioncmp($::operatingsystemrelease, '12.04') == 0 or versioncmp($::operatingsystemrelease, '14.04') == 0) {
      apt::ppa {'ppa:unleashedtech/pound-2.7': }
   }
 
